@@ -18,16 +18,16 @@ final List<String> MassName = [
 ];
 
 var colorList = [
-  Color(0xFF7986CB),
-  Color(0xFFAA00FF),
-  Color(0xFFBF360C),
-  Color(0xFFAEEA00),
-  Color(0xFFFDD835),
-  Color(0xFF7E57C2),
-  Color(0xFF0057ff42),
-  Color(0xFFffad3142),
-  Color(0xFF263238),
-  Color(0xFF304FFE),
+  const Color(0xFF7986CB),
+  const Color(0xFFAA00FF),
+  const Color(0xFFBF360C),
+  const Color(0xFFAEEA00),
+  const Color(0xFFFDD835),
+  const Color(0xFF7E57C2),
+  const Color(0xFF2979FF),
+  const Color(0xFFffad3142),
+  const Color(0xFF263238),
+  const Color(0xFF304FFE),
 ];
 // ignore: library_private_types_in_public_api
 
@@ -80,7 +80,9 @@ class _startState extends State<start> {
               decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 227, 222, 222),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: colorList[index],),
+                  border: Border.all(
+                    color: colorList[index],
+                  ),
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 5.0,

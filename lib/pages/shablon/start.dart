@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:shablon/pages/create.dart';
 
-
 final List<String> MassName = [
   'Привет',
   'Привет',
@@ -18,21 +17,19 @@ final List<String> MassName = [
   'Привет',
 ];
 
-// ignore: library_private_types_in_public_api
-const List<_MyColor> myBgColors = const <_MyColor>[
-  const _MyColor(Color(0xFFFFC100), 'Orange'),
-  const _MyColor(const Color(0xFF91FAFF), 'Light Blue'),
-  const _MyColor(const Color(0xFF00D1FF), 'Cyan'),
-  const _MyColor(const Color(0xFF00BCFF), 'Cerulean'),
-  const _MyColor(const Color(0xFF009BEE), 'Blue'),
+var colorList = [
+  Color(0xFF7986CB),
+  Color(0xFFAA00FF),
+  Color(0xFFBF360C),
+  Color(0xFFAEEA00),
+  Color(0xFFFDD835),
+  Color(0xFF7E57C2),
+  Color(0xFF0057ff42),
+  Color(0xFFffad3142),
+  Color(0xFF263238),
+  Color(0xFF304FFE),
 ];
-
-class _MyColor {
-  const _MyColor(this.color, this.name);
-
-  final Color color;
-  final String name;
-}
+// ignore: library_private_types_in_public_api
 
 void main() {
   runApp(const MaterialApp(
@@ -42,9 +39,14 @@ void main() {
 }
 
 // ignore: camel_case_types
-class start extends StatelessWidget {
+class start extends StatefulWidget {
   const start({super.key});
 
+  @override
+  State<start> createState() => _startState();
+}
+
+class _startState extends State<start> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -78,11 +80,13 @@ class start extends StatelessWidget {
               decoration: BoxDecoration(
                   color: const Color.fromARGB(255, 227, 222, 222),
                   borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: Colors.black),
-                  boxShadow: const[
-                    BoxShadow(blurRadius: 10.0, color: Colors.red)
-                  ]
-                  ),
+                  border: Border.all(color: colorList[index],),
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: 5.0,
+                      color: colorList[index],
+                    )
+                  ]),
               width: MediaQuery.of(context).size.width,
               child: Padding(
                 padding: const EdgeInsets.only(

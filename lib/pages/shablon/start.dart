@@ -25,7 +25,8 @@ var colorList = [
   const Color(0xFFFDD835),
   const Color(0xFF7E57C2),
   const Color(0xFF2979FF),
-  const Color(0xFFffad3142),
+  // ignore: use_full_hex_values_for_flutter_colors
+  const Color(0xffffad3142),
   const Color(0xFF263238),
   const Color(0xFF304FFE),
 ];
@@ -46,6 +47,7 @@ class start extends StatefulWidget {
   State<start> createState() => _startState();
 }
 
+// ignore: camel_case_types
 class _startState extends State<start> {
   @override
   Widget build(BuildContext context) {
